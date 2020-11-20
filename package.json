@@ -1,0 +1,15 @@
+{
+  "name": "celianniclot_p1_20112020",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/SCSS/main.scss:./src/CSS/main.css --style expanded"
+  },
+  "author": "Célian Niclot <celian.niclot@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "repository": "https://github.com/Celian-N/CelianNiclot_2_20112020.git",
+  "dependencies": {
+    "sass": "^1.29.0"
+  }
+}
