@@ -1,3 +1,75 @@
+/*-------HEADER------*/
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
 
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+  width: 400px;
+  align-items: center;
+}
+#navbar .btn__register {
+  width: 33%;
+  text-align: center;
+  font-weight: bold;
+  color: #0065fc;
+}
+#navbar .btn__nav {
+  padding: 20px 0;
+  transition: color 300ms;
+}
+#navbar .btn__nav--active {
+  color: #0065fc !important;
+  border-top: 2px solid #0065fc;
+}
+#navbar .btn__nav:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#navbar nav {
+  display: flex;
+  justify-content: space-around;
+  width: 66%;
+}
+
+/*-------SEARCH------*/
+#search,
+#lodgings,
+#activities {
+  padding-top: 80px;
+  margin-bottom: -80px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body a {
+  text-decoration: none;
+}
+body a:visited {
+  color: black;
+}
 
 /*# sourceMappingURL=main.css.map */
