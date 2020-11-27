@@ -330,3 +330,27 @@
     }
   }
 }
+
+/*----FOOTER----*/
+#footer {
+  display: flex;
+  flex-direction: row;
+  height: 180px;
+  width: 100vw;
+  margin-top: 130px;
+  background-color: $color-tertiary;
+  justify-content: space-between;
+  align-items: center;
+  & .footer-list {
+    width: 30vw;
+    & ul {
+      list-style-type: none;
+      align-items: flex-start;
+      padding-left: 0;
+      line-height: 30px;
+    }
+    & p {
+      font-weight: bolder;
+    }
+  }
+}
