@@ -8,6 +8,7 @@
   position: fixed;
   width: 100%;
   background-color: white;
+  z-index: 10;
 }
 
 #navbar {
@@ -70,13 +71,18 @@
   height: 36px;
 }
 .search-form__button {
-  height: 40px;
+  height: 42px;
   line-height: 40px;
   padding: 0 10px;
   color: white;
   background-color: #0065fc;
   border: 1px solid transparent;
   border-radius: 0 10px 10px 0;
+  transition: background-color 300ms;
+}
+.search-form__button:hover {
+  background-color: rgba(0, 101, 252, 0.8);
+  cursor: pointer;
 }
 
 .filter-group {
@@ -96,6 +102,12 @@
   border-radius: 50px;
   padding: 0 10px;
   height: 34px;
+  transition: background-color 300ms;
+}
+.filter-group__button:hover {
+  background-color: #0065fc;
+  color: white;
+  cursor: pointer;
 }
 .filter-group__button--icon {
   align-items: center;
@@ -130,7 +142,7 @@
 .lodgings-marseille {
   background-color: #f2f2f2;
   padding: 30px 30px;
-  width: 60vw;
+  width: 59vw;
   border-radius: 30px;
   height: 650px;
 }
@@ -187,7 +199,7 @@
 .more-famous {
   background-color: #f2f2f2;
   padding: 30px 30px;
-  width: 25vw;
+  width: 24vw;
   border-radius: 30px;
   height: 650px;
 }
@@ -270,7 +282,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  width: 94vw;
   margin-top: 30px;
   font-size: 18px;
 }
@@ -330,26 +342,42 @@
 
 /*----FOOTER----*/
 #footer {
-  display: flex;
-  flex-direction: row;
   height: 180px;
   width: 100vw;
   margin-top: 130px;
   background-color: #f2f2f2;
+}
+#footer .footer-links {
+  height: 180px;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 3vw;
 }
-#footer .footer-list {
+#footer .footer-links .footer-list {
   width: 30vw;
 }
-#footer .footer-list ul {
+#footer .footer-links .footer-list ul {
   list-style-type: none;
   align-items: flex-start;
   padding-left: 0;
   line-height: 30px;
 }
-#footer .footer-list p {
+#footer .footer-links .footer-list p {
   font-weight: bolder;
+}
+
+/*-----EFFECT HOVER----*/
+.lodging-card a,
+.famous-card a,
+.activities-cards a {
+  transition: opacity 300ms;
+}
+.lodging-card a:hover,
+.famous-card a:hover,
+.activities-cards a:hover {
+  opacity: 0.7;
 }
 
 html {
@@ -363,10 +391,11 @@ html {
 }
 body {
   font-family: "Raleway", sans-serif;
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   color: black;
 }
 body a {
@@ -374,6 +403,14 @@ body a {
 }
 body a:visited {
   color: black;
+}
+
+#header,
+#search,
+.lodgings-famous-line,
+#activities {
+  width: 94vw;
+  margin-left: 3vw;
 }
 
 /*# sourceMappingURL=main.css.map */

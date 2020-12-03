@@ -10,6 +10,7 @@
   position: fixed;
   width: 100%;
   background-color: white;
+  z-index: 10;
 }
 #navbar {
   display: flex;
@@ -72,13 +73,18 @@
     height: 36px;
   }
   &__button {
-    height: 40px;
+    height: 42px;
     line-height: 40px;
     padding: 0 10px;
     color: white;
     background-color: $color-primary;
     border: 1px solid transparent;
     border-radius: 0 10px 10px 0;
+    transition: background-color 300ms;
+    &:hover {
+      background-color: rgba($color-primary, $alpha: 0.8);
+      cursor: pointer;
+    }
   }
 }
 
@@ -98,6 +104,12 @@
     border-radius: 50px;
     padding: 0 10px;
     height: 34px;
+    transition: background-color 300ms;
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+      cursor: pointer;
+    }
     &--icon {
       align-items: center;
       width: 20px;
@@ -132,7 +144,7 @@
 .lodgings-marseille {
   background-color: $color-tertiary;
   padding: 30px 30px;
-  width: 60vw;
+  width: 59vw;
   border-radius: 30px;
   height: 650px;
 }
@@ -188,7 +200,7 @@
 .more-famous {
   background-color: $color-tertiary;
   padding: 30px 30px;
-  width: 25vw;
+  width: 24vw;
   border-radius: 30px;
   height: 650px;
   &__title {
@@ -270,7 +282,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  width: 94vw;
   margin-top: 30px;
   font-size: map-get($font-size, text-activities);
 
@@ -333,24 +345,40 @@
 
 /*----FOOTER----*/
 #footer {
-  display: flex;
-  flex-direction: row;
   height: 180px;
   width: 100vw;
   margin-top: 130px;
   background-color: $color-tertiary;
-  justify-content: space-between;
-  align-items: center;
-  & .footer-list {
-    width: 30vw;
-    & ul {
-      list-style-type: none;
-      align-items: flex-start;
-      padding-left: 0;
-      line-height: 30px;
+
+  .footer-links {
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+    & .footer-list {
+      width: 30vw;
+      & ul {
+        list-style-type: none;
+        align-items: flex-start;
+        padding-left: 0;
+        line-height: 30px;
+      }
+      & p {
+        font-weight: bolder;
+      }
     }
-    & p {
-      font-weight: bolder;
-    }
+  }
+}
+
+/*-----EFFECT HOVER----*/
+
+.lodging-card a,
+.famous-card a,
+.activities-cards a {
+  transition: opacity 300ms;
+  &:hover {
+    opacity: 0.7;
   }
 }
