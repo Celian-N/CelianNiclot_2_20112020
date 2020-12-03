@@ -114,6 +114,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 20px 0;
   &__icon {
     align-items: center;
     width: 20px;
@@ -124,4 +125,58 @@
     margin-right: 10px;
     text-align: center;
   }
+}
+
+/*-------LODGINGS------*/
+.lodgings-marseille {
+  background-color: $color-tertiary;
+  padding: 30px 30px;
+  width: 60vw;
+  border-radius: 30px;
+  margin-bottom: 100px;
+}
+.lodgings-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.lodging-card {
+  width: 30%;
+  height: 230px;
+  background-color: white;
+  padding: 4px;
+  font-size: map-get($font-size, card-title);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  line-height: 10px;
+  box-shadow: 0px 5px 5px rgba(grey, 0.1);
+  & h2 {
+    font-weight: bolder;
+  }
+  & a img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  &__infos {
+    margin-left: 10px;
+  }
+  &__price {
+    font-size: map-get($font-size, card-price);
+    &--euros {
+      font-weight: bolder;
+    }
+  }
+}
+.see-more {
+  font-weight: bolder;
+  font-size: map-get($font-size, text);
+  margin-bottom: 10px;
 }
