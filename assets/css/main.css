@@ -514,6 +514,19 @@
     width: 100vw;
   }
 
+  .search-form__input {
+    width: 50%;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter-group__button {
+    width: 55%;
+    margin-bottom: 0.5rem;
+  }
+
   .lodgings-famous-line {
     width: 100vw !important;
     margin-left: 0 !important;
@@ -562,6 +575,9 @@
     display: block;
     height: auto;
     padding: 1vh 5vw;
+  }
+  #footer .footer-links .footer-list {
+    width: 100%;
   }
   #footer .footer-links .footer-list p {
     margin-top: 30px;
