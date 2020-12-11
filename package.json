@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./src/scss/main.scss:./assets/css/main.css --style expanded"
+    "sass": "sass --watch ./src/scss/main.scss:./assets/css/main.css --style compressed"
   },
   "author": "Célian Niclot <celian.niclot@gmail.com>",
   "license": "ISC",
